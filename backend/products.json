@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Laptop E-commmerceApp E34053-30291",
+    "price": "800",
+    "description": "AMD Ryzen 5 7520U - AMD Radeon Graphics - RAM: 16 GB - 512 GB - 15.6",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926866/laptop_zw6ari.jpg",
+    "type": "computer",
+    "subtype": "laptop",
+    "id": "001"
+  },
+  {
+    "name": "Laptop E-commmerceApp E56049-34012",
+    "price": "650",
+    "description": "14 - Intel N200 - RAM: 4GB - 128 GB UFS",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926848/laptop2_ifunyj.jpg",
+    "type": "computer",
+    "subtype": "laptop",
+    "id": "002"
+  },
+  {
+    "name": "GameBoy Advance",
+    "price": "250",
+    "description": "A Classic portable gaming fun for all ages",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926853/gameboyAdvance_ysnuv6.jpg",
+    "type": "consoles",
+    "subtype": "portable",
+    "genre": "gaming",
+    "id": "003"
+  },
+  {
+    "name": "GameBoy Color",
+    "price": "150",
+    "description": "A Classic portable gaming fun for all ages",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926854/gameboyColor_jhbbjh.jpg",
+    "type": "consoles",
+    "subtype": "portable",
+    "genre": "gaming",
+    "id": "004"
+  },
+  {
+    "name": "PlayStation 4",
+    "price": "350",
+    "description": "Immerse in stunning gameplay and entertainment with the PlayStation 4 console",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926869/playstation_nkne2e.jpg",
+    "type": "consoles",
+    "subtype": "nonPortable",
+    "genre": "gaming",
+    "id": "005"
+  },
+  {
+    "name": "Headphones N-23012",
+    "price": "50",
+    "description": "High-quality headphones for immersive sound, comfort, and style, perfect for your music and audio experience",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926847/headphones_a6tgwa.jpg",
+    "type": "acessories",
+    "subtype": "audio",
+    "genre": "gaming",
+    "id": "006"
+  },
+  {
+    "name": "PlayStation 4 Joystick xp-23012",
+    "price": "30",
+    "description": "Responsive and ergonomic PlayStation 4 joystick for an enhanced gaming experience, with precise control and comfortable design",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926857/joystick_zff5mb.jpg",
+    "type": "acessories",
+    "genre": "gaming",
+    "id": "007"
+  },
+  {
+    "name": "Electric Kettle AB23043",
+    "price": "70",
+    "description": "Efficient and stylish electric kettle for quick boiling and hot beverages at your fingertips",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926870/electricKettle2_pucr8k.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "kettle",
+    "id": "008"
+  },
+  {
+    "name": "American Fridge AF-23041",
+    "price": "750",
+    "description": "Spacious, feature-rich American fridge with ample storage, ice, and water dispensers for your kitchen convenience",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926868/frigde2_sfdm5n.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "frigde",
+    "id": "009"
+  },
+  {
+    "name": "Fridge N-25321",
+    "price": "550",
+    "description": "Reliable and compact fridge offering essential cooling and storage for everyday needs in any kitchen",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926865/frigde_zxp7ga.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "frigde",
+    "id": "010"
+  },
+  {
+    "name": "Headphones R-23012",
+    "price": "70",
+    "description": "High-quality headphones for immersive sound and comfort",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926863/headphones2_ibrhnw.jpg",
+    "type": "audio",
+    "subtype": "audio",
+    "id": "011"
+  },
+  {
+    "name": "Electric Kettle PX23345",
+    "price": "85",
+    "description": "The Most modern, efficient and stylish electric kettle for quick boiling",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926859/electricKettle_vk6eu9.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "kettle",
+    "id": "012"
+  },
+  {
+    "name": "Television Retro AX2304",
+    "price": "85",
+    "description": "Vintage TV, a nostalgic trip back in time",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1699286199/retroTV_grzfre.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "tv",
+    "id": "013"
+  },
+  {
+    "name": "Television LCD XQ2039",
+    "price": "195",
+    "description": "Sleek, high-res smart TV for immersive entertainment",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1698926861/tv_xcymbs.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "tv",
+    "id": "014"
+  },
+  {
+    "name": "Microwave AX-1230",
+    "price": "60",
+    "description": "A slow, outdated model with limited features",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1699286200/microwave2_y5rpet.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "microwave",
+    "id": "015"
+  },
+  {
+    "name": "Microwave PQ-2034",
+    "price": "90",
+    "description": "A decent, mid-range option with standard functions and reliability",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1699286200/microwave_bmezyj.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "microwave",
+    "id": "016"
+  },
+  {
+    "name": "Microwave QS-4059",
+    "price": "130",
+    "description": "A high-powered, efficient microwave with advanced cooking options",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1699286201/microwave3_kiimj2.jpg",
+    "type": "homeAndKitchen",
+    "subtype": "microwave",
+    "id": "017"
+  },
+  {
+    "name": "Mouse CL-2034",
+    "price": "100",
+    "description": "A basic gaming mouse offers responsive controls for casual gamers",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1699286201/mouse2_kmayxt.jpg",
+    "type": "acessories",
+    "subtype": "mouse",
+    "genre": "gaming",
+    "id": "018"
+  },
+  {
+    "name": "Mouse XL-0239",
+    "price": "130",
+    "description": "A premium gaming mouse features RGB lighting, high DPI, and programmable buttons for competitive gamers",
+    "image": "https://res.cloudinary.com/dgjqb40aj/image/upload/v1699286174/mouse_ooqy7x.jpg",
+    "type": "acessories",
+    "subtype": "mouse",
+    "genre": "gaming",
+    "id": "019"
+  }
+]
