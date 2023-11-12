@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/usersRoutes");
-const addProductToCart = require("./routes/addToCartRoutes");
+const addProductToCart = require("./routes/cartRoutes");
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use("/products", productRoutes);
 
 app.use("/users", userRoutes);
 
-app.use("/addToCart", addProductToCart);
+app.use("/cart", addProductToCart);
 
 app.use((error, req, res, next) => {
   if (req.file)

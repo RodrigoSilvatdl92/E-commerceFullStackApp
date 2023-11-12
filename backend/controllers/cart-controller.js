@@ -3,6 +3,8 @@ const Cart = require("../models/cart");
 const User = require("../models/user");
 const mongoose = require("mongoose");
 
+////////////// ADD PRODUCT TO CART
+
 const addProductToCart = async (req, res, next) => {
   const { userId, name, image, quantity, price, productId } = req.body;
 
@@ -69,13 +71,16 @@ const addProductToCart = async (req, res, next) => {
       const sess = await mongoose.startSession();
       sess.startTransaction();
       await existingCart.save({ session: sess });
-      user.cart = existingCart;
-      await user.save({ session: sess, validateModifiedOnly: true });
+      if (!user.cart) {
+        user.cart = existingCart;
+        await user.save({ session: sess, validateModifiedOnly: true });
+        console.log("saving cart on user");
+      }
       await sess.commitTransaction();
     } catch (err) {
       console.log(err);
       const error = new HttpError(
-        "Creating Place failed, please try again",
+        "Adding product failed, please try again",
         500
       );
       return next(error);
@@ -93,4 +98,76 @@ const addProductToCart = async (req, res, next) => {
   }
 };
 
+////////////// DELETE PRODUCT FROM CART
+
+const deleteProductFromCart = async (req, res, next) => {
+  const { userId, productId } = req.body;
+
+  let cartId;
+  try {
+    cartId = await Cart.findOne({ userId });
+    console.log(cartId);
+  } catch (err) {
+    const error = new HttpError("User not found", 404);
+    return next(error);
+  }
+
+  const productSelected = cartId.products.find(
+    (product) => product.productId === productId
+  );
+
+  if (!productSelected) {
+    const error = new HttpError(
+      "Product not found in the cart. Cannot delete",
+      404
+    );
+    return next(error);
+  } else {
+    try {
+      const sess = await mongoose.startSession();
+      sess.startTransaction();
+      if (productSelected.quantity > 1) {
+        productSelected.quantity -= 1;
+      } else {
+        await productSelected.deleteOne({ session: sess });
+      }
+
+      await cartId.save({ session: sess });
+      await sess.commitTransaction();
+    } catch (err) {
+      console.log(err);
+      const error = new HttpError(
+        "Something went wrong, could not delete product.",
+        500
+      );
+      return next(error);
+    }
+  }
+
+  if (cartId.products.length === 0) {
+    const userToHaveCartDeleted = await User.findById(userId);
+    try {
+      const sess = await mongoose.startSession();
+      sess.startTransaction();
+      await cartId.deleteOne({ session: sess });
+      if (userToHaveCartDeleted.cart) {
+        userToHaveCartDeleted.cart = null;
+      }
+
+      await userToHaveCartDeleted.save();
+      await sess.commitTransaction();
+    } catch (err) {
+      console.log(err);
+      const error = new HttpError(
+        "Something went wrong, could not delete cart.",
+        500
+      );
+      return next(error);
+    }
+  }
+
+  res.json({ message: "You'r sucefull at deleting the product" });
+};
+
 exports.addProductToCart = addProductToCart;
+exports.deleteProductFromCart = deleteProductFromCart;
