@@ -37,7 +37,7 @@ const createUser = async (req, res, next) => {
   }
 
   let imageCloudinaryUrl;
-  const publicId = `picturesOfUsers/${username}/image`;
+  const publicId = `picturesOfUsers/${email}/image`;
   try {
     const result = await cloudinary.uploader.upload(`${image.path}`, {
       public_id: publicId,
